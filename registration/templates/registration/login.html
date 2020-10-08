@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Iniciar sesión{% endblock %}
+{% block content %}
+<div class="container">
+    <form action="get">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="usuario">Nombre de Usuario</label>
+                    <input type="text" class="form-control" name="usuario">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="usuario">clave</label>
+                    <input type="password" class="form-control" name="pass_field">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="usuario">R Contraseña</label>
+                    <input type="submit" class="btn btn-primary" name="Ingresar">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
